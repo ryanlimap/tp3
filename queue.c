@@ -1,4 +1,3 @@
-// queue.c
 #include "queue.h"
 #include "simulation.h"
 #include <stdlib.h>
