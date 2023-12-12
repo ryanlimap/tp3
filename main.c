@@ -6,7 +6,7 @@
 #include <time.h>
 
 int main() {
-    srand(time(NULL));  // Inicializa a semente para números pseudoaleatórios
+    srand(time(NULL));  // Inicializa a semente para números aleatórios
 
     Simulation *sim = create_simulation();
     
