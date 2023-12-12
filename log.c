@@ -1,4 +1,3 @@
-// log.c
 #include "log.h"
 #include "simulation.h"
 #include <stdio.h>
