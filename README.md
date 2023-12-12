@@ -4,8 +4,8 @@ Este repositório contém arquivos fontes para um Simulador de Realização de E
 
 **Autores**
 
-* Ryan Lima Peçanha: [@ryanlimap] (https://github.com/ryanlimap/)
-* Paulo Vitor Callegari Dalvi: [@paulovitorcallegari] (https://github.com/paulovitorcallegari/)
+* Ryan Lima Peçanha: [@ryanlimap](https://github.com/ryanlimap/)
+* Paulo Vitor Callegari Dalvi: [@paulovitorcallegari](https://github.com/paulovitorcallegari/)
 
 # 📌 Objetivo
 
