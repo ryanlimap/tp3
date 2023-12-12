@@ -1,4 +1,3 @@
-// simulation.h
 #ifndef SIMULATION_H
 #define SIMULATION_H
 
@@ -9,7 +8,6 @@ typedef struct {
     Queue* patient_queue;
     Queue* exam_queue;
     Log* log;
-    // Adicione outras estruturas de dados necessárias para a simulação
 } Simulation;
 
 int generate_random_time(int min, int max);
