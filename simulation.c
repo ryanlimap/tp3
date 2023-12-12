@@ -1,4 +1,3 @@
-// simulation.c
 #include "simulation.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -59,7 +58,7 @@ void perform_exam(Simulation* sim, int time_step) {
 
         // Simulação do tempo de duração do exame
         for (int i = 0; i < exam_duration; i++) {
-            // Lógica do exame (se necessário)
+            // Lógica do exame
         }
 
         log_event(sim->log, "Fim do exame para o paciente", patient_id, time_step + exam_duration);
@@ -90,8 +89,8 @@ void simulate_time_step(Simulation* sim, int time_step) {
         int patient_id = generate_patient_id();
         ExamRecord patient_exam;
         patient_exam.patient_id = patient_id;
-        patient_exam.timestamp = time_step;  // Isso pode ser ajustado conforme necessário
-        patient_exam.condition = generate_random_condition();  // Como mencionado, ajuste conforme necessário
+        patient_exam.timestamp = time_step; 
+        patient_exam.condition = generate_random_condition();  
         enqueue(sim->patient_queue, patient_exam);
         log_event(sim->log, "Novo paciente chegou ao hospital", patient_id, time_step);
     }
@@ -113,8 +112,6 @@ Simulation* create_simulation() {
     sim->exam_queue = create_queue();
     sim->log = create_log();
 
-    // Inicialize outras estruturas de dados necessárias
-
     return sim;
 }
 
@@ -129,7 +126,6 @@ void update_and_print_metrics(Simulation* sim) {
     // Quantidade de exames realizados após o limite de tempo
     int late_diagnosis_count = 0;
 
-    // Iterar sobre a fila de exames
     Node* current_node = sim->exam_queue->front;
     while (current_node != NULL) {
         ExamRecord current_exam = current_node->data;
@@ -171,6 +167,5 @@ void destroy_simulation(Simulation* sim) {
     destroy_queue(sim->patient_queue);
     destroy_queue(sim->exam_queue);
     destroy_log(sim->log);
-    // Libere outras estruturas de dados necessárias
     free(sim);
 }
